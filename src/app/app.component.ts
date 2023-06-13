@@ -13,8 +13,8 @@ export class AppComponent {
 
   openPdfDialog(): void {
     const dialogRef = this.dialog.open(PdfDialogComponent, {
-      width: '1200px',
-      height:'1200px',
+      width: '610px',
+      height:'610px',
       data: { pdfUrl: 'https://www.orimi.com/pdf-test.pdf' }
     });
   }
