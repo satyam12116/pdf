@@ -18,4 +18,17 @@ export class AppComponent {
       data: { pdfUrl: 'https://www.orimi.com/pdf-test.pdf' }
     });
   }
+  downloadPDF() {
+    const pdfUrl = 'https://www.orimi.com/pdf-test.pdf';
+    const link = document.createElement('a');
+    link. href = pdfUrl;
+    link.download = 'document pdf';
+    link.target = '_self';
+    document.body. appendChild (link);
+    link.click();
+    document.body.removeChild(link);
+  }
+ 
+ 
+
 }
