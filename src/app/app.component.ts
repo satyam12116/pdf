@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PdfDialogComponent } from './pdf-dialog/pdf-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pdf';
+  constructor(private dialog: MatDialog) {}
+
+  openPdfDialog(): void {
+    const dialogRef = this.dialog.open(PdfDialogComponent, {
+      width: '1200px',
+      height:'1200px',
+      data: { pdfUrl: 'https://www.orimi.com/pdf-test.pdf' }
+    });
+  }
 }
